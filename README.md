@@ -19,7 +19,7 @@ npm test
 ## 使用组件
 
 ```jsx
-import { Button, Card, Checkbox, Input, Tag } from './components';
+import { Button, Card, Checkbox, Form, Input, Tag } from './components';
 
 <Button variant="primary">提交</Button>
 <Input value={value} onChange={handleChange} />
@@ -28,6 +28,7 @@ import { Button, Card, Checkbox, Input, Tag } from './components';
 </Checkbox>
 <Tag>推荐</Tag>
 <Card title="卡片标题">卡片正文</Card>
+<Form onSubmit={handleSubmit}>表单内容</Form>
 ```
 
 ## 组件
@@ -37,6 +38,7 @@ import { Button, Card, Checkbox, Input, Tag } from './components';
 | `Button` | 基础按钮和颜色语义 | [Button](docs/components/button.md) |
 | `Input` | 最小受控文本输入框 | [Input](docs/components/input.md) |
 | `Checkbox` | 受控选中、禁用和值 | [Checkbox](docs/components/checkbox.md) |
+| `Form` | 组织表单内容并处理提交事件 | [Form](docs/components/form.md) |
 | `Tag` | 展示轻量标签内容 | [Tag](docs/components/tag.md) |
 | `Card` | 展示标题和正文区域 | [Card](docs/components/card.md) |
 
@@ -56,4 +58,5 @@ import { Button, Card, Checkbox, Input, Tag } from './components';
 
 - 保持学习项目所需的最小 API，不包含尺寸、主题、表单封装等扩展能力。
 - `Input` 和 `Checkbox` 是受控组件，调用方负责保存和更新状态。
+- `Form` 不保存字段值，也不内置校验或数据请求。
 - `Checkbox` 的“其他”补充输入框暂时没有独立的公共 value 或事件。

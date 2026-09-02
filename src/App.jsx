@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Card, Checkbox, Input, Tag } from './components';
+import { Button, Card, Checkbox, Form, Input, Tag } from './components';
 import './App.css';
 
 function App() {
@@ -7,6 +7,8 @@ function App() {
   const [inputValue, setInputValue] = useState('');
   const [checked, setChecked] = useState(false);
   const [otherChecked, setOtherChecked] = useState(false);
+  const [formValue, setFormValue] = useState('');
+  const [submittedValue, setSubmittedValue] = useState('');
 
   return (
     <main className="demo">
@@ -62,6 +64,26 @@ function App() {
       <section className="demo__section">
         <h2>Card</h2>
         <Card title="基础卡片">这是 Card 的内容。</Card>
+      </section>
+
+      <section className="demo__section">
+        <h2>Form</h2>
+        <Form
+          onSubmit={(event) => {
+            event.preventDefault();
+            setSubmittedValue(formValue);
+          }}
+        >
+          <label>
+            表单内容：
+            <Input
+              value={formValue}
+              onChange={(event) => setFormValue(event.target.value)}
+            />
+          </label>
+          <Button type="submit">提交表单</Button>
+        </Form>
+        <p>提交结果：{submittedValue || '暂未提交'}</p>
       </section>
     </main>
   );
