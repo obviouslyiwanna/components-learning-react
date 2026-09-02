@@ -1,0 +1,12 @@
+.cl-tag {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border: 1px solid #adc6ff;
+  border-radius: 999px;
+  background: #f0f5ff;
+  color: #2f54eb;
+  font-size: 12px;
+  line-height: 20px;
+}

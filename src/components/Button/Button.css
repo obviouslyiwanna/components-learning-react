@@ -1,0 +1,96 @@
+.cl-button {
+  --button-background: #1890ff;
+  --button-hover-background: #40a9ff;
+  --button-active-background: #096dd9;
+  --button-border: #1890ff;
+  --button-hover-border: #40a9ff;
+  --button-active-border: #096dd9;
+  --button-text: #ffffff;
+  --button-hover-text: #ffffff;
+  --button-active-text: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 4px 15px;
+  border: 1px solid var(--button-border);
+  border-radius: 6px;
+  background: var(--button-background);
+  color: var(--button-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5715;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.cl-button:not(:disabled):hover {
+  border-color: var(--button-hover-border);
+  background: var(--button-hover-background);
+  color: var(--button-hover-text);
+}
+
+.cl-button:not(:disabled):active {
+  border-color: var(--button-active-border);
+  background: var(--button-active-background);
+  color: var(--button-active-text);
+}
+
+.cl-button:focus-visible {
+  outline: 2px solid rgb(24 144 255 / 35%);
+  outline-offset: 2px;
+}
+
+.cl-button:disabled {
+  border-color: #d9d9d9;
+  background: #f5f5f5;
+  color: rgb(0 0 0 / 25%);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.cl-button[data-variant='default'],
+.cl-button[data-variant='neutral'] {
+  --button-background: #ffffff;
+  --button-hover-background: #ffffff;
+  --button-active-background: #ffffff;
+  --button-border: #d9d9d9;
+  --button-hover-border: #40a9ff;
+  --button-active-border: #096dd9;
+  --button-text: rgb(0 0 0 / 85%);
+  --button-hover-text: #40a9ff;
+  --button-active-text: #096dd9;
+}
+
+.cl-button[data-variant='success'] {
+  --button-background: #16a34a;
+  --button-hover-background: #22c55e;
+  --button-active-background: #15803d;
+  --button-border: #16a34a;
+  --button-hover-border: #22c55e;
+  --button-active-border: #15803d;
+}
+
+.cl-button[data-variant='warning'] {
+  --button-background: #d97706;
+  --button-hover-background: #f59e0b;
+  --button-active-background: #b45309;
+  --button-border: #d97706;
+  --button-hover-border: #f59e0b;
+  --button-active-border: #b45309;
+}
+
+.cl-button[data-variant='danger'] {
+  --button-background: #dc2626;
+  --button-hover-background: #ef4444;
+  --button-active-background: #b91c1c;
+  --button-border: #dc2626;
+  --button-hover-border: #ef4444;
+  --button-active-border: #b91c1c;
+}

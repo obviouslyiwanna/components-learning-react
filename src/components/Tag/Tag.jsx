@@ -1,5 +1,7 @@
+import './Tag.css';
+
 function Tag({ children }) {
-  return <span>{children}</span>;
+  return <span className="cl-tag">{children}</span>;
 }
 
 export default Tag;

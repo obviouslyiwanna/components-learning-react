@@ -1,6 +1,19 @@
-function Button({ children, disabled = false, onClick }) {
+import './Button.css';
+
+function Button({
+  children,
+  disabled = false,
+  onClick,
+  variant = 'primary',
+}) {
   return (
-    <button type="button" disabled={disabled} onClick={onClick}>
+    <button
+      className="cl-button"
+      data-variant={variant}
+      type="button"
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

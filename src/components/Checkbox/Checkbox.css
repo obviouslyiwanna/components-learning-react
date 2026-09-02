@@ -1,0 +1,19 @@
+.cl-checkbox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cl-checkbox__row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.cl-checkbox__other-input {
+  width: 180px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding: 6px 8px;
+}
